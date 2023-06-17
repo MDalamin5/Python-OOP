@@ -1,0 +1,10 @@
+print("Learnig Take input from User")
+money = input("Give me some data: ")
+print("Your input data is: ",money)
+first_inp=input("Give some data: ")
+secent_inp=input("Give another data: ")
+print(first_inp,secent_inp)
+firse_data_int=int(first_inp)
+secend_data_int=int(secent_inp)
+total = firse_data_int+secend_data_int
+print(total)
