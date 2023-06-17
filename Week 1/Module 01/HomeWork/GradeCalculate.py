@@ -1,6 +1,14 @@
-# print(5%3)
-for i in range(5):
- print(i)
+grd = input("Enter you number: ")
 
-print(10//2)
- 
+grade = int(grd)
+
+if grade>89:
+    print("A")
+elif grade>79:
+    print("A-")
+elif grade>69:
+    print("B+")
+elif grade>59:
+    print("Pass in exam")
+else:
+    print("Fail!! Batter luck for next time")
