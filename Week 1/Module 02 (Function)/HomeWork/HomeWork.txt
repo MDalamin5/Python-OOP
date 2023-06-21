@@ -1,2 +1,5 @@
 Visit this link and explore all of the buildin function.
 link: https://docs.python.org/3/tutorial/datastructures.html
+
+HomeWork
+paractice in build in function
