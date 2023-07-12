@@ -1,0 +1,16 @@
+Structure:
+list: A list is an ordered collection of elements enclosed in square brackets ([]). 
+Dictionary: A dictionary is an unordered collection of key-value pairs enclosed in curly braces ({}).
+
+indexing:
+list: List: Elements in a list are accessed by their index values, which start from 0 or another way. For example, my_list[0] or my_list[-1] is the last index
+of the list
+Dictionary: Elements in a dictionary are accessed by their keys. For example, my_dict['key'] retrieves the value associated with the key 'key'.
+
+Mutability:
+list: Lists are mutable, meaning i can change, add, or remove elements after the list is created. 
+Dictionary: Dictionaries are also mutable. i can modify existing key-value pairs, add new key-value pairs, or remove key-value pairs from a dictionary.
+
+Duplicate Entries:
+list: Lists can contain duplicate entries. The same value can appear multiple times in a list.
+Dictionaries: Dictionaries are useful for storing data where accessing values by a unique key is essential.

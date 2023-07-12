@@ -1,0 +1,36 @@
+
+
+*args:
+
+The *args syntax allows you to pass a variable number of positional arguments to a function.
+ The asterisk (*) before args indicates that any number of positional arguments can be 
+ passed, and they are collected into a tuple within the function.
+
+ example: 
+ def sum_values(*args):
+    total = 0
+    for num in args:
+        total += num
+    return total
+
+result = sum_values(1, 2, 3, 4, 5)
+print(result) 
+
+ Output: 15
+
+**kwargs: 
+
+The **kwargs syntax allows you to pass a variable number of keyword arguments to a function. 
+The double asterisks (**) before kwargs indicate that any number of keyword arguments can be
+ passed, and they are collected into a dictionary within the function.
+
+ example: def print_info(**kwargs):
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+
+print_info(name="John", age=25, country="USA")
+
+Output:
+name: John
+age: 25
+country: USA
