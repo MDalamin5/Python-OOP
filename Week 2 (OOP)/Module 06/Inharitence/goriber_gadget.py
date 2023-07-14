@@ -21,19 +21,29 @@ class Laptop:
     def codding(self):
         return f'learning python and practicing'
     
-class Phone:
-    def __init__(self, brand , price, color, dual_sim) -> None:
-
+class Phone(Gadget):
+    def __init__(self,brand, price, color, orgin,dual_sim) -> None:
         self.dual_sim = dual_sim
-        pass
+        super().__init__(brand,price,color,orgin)
     
     def phone_Call(self,number, text):
         return f'Sending SMS to {number} with : {text}'
+    
+    def __repr__(self) -> str:
+       return f'Phone Brand: {self.brand}, Price: {self.price}, Color: {self.color}, Duel sim: {self.dual_sim}'
+    
     
 
 class Camera:
     def __init__(self,brand, price, color, pixel) -> None:
         self.pixel = pixel
+        
 
     def change_lens(self):
         pass
+
+# inharitance
+
+my_phone = Phone('iPhone', '3454', 'Black', 'Canada',True)
+print(my_phone.brand)
+print(my_phone)
