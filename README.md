@@ -25,12 +25,12 @@ To get started with this repository, follow these steps:
 
 1. Clone the repository to your local machine using the following command:
    ```
-   git clone https://github.com/MDalamin5/Python-Basics-to-Advance.git
+   git clone https://github.com/MDalamin5/Python-OOP
    ```
 
 2. Navigate to the cloned repository directory:
    ```
-   cd Python-Basics-to-Advance
+   cd Python-OOP
    ```
 
 3. Explore the practice modules and project in the repository. Each module is organized in its respective directory, and you can find code examples and exercises within each module folder.
