@@ -17,12 +17,12 @@ class User:
 
 
 class Bus:
-    def __init__(self, coach, driver, arrival, deaparture, form_des, to) -> None:
+    def __init__(self, coach, driver, arrival, deaparture, from_des, to) -> None:
         self.coach = coach
         self.driver = driver
         self.arrival = arrival
         self.deaparture = deaparture
-        self.from_des = form_des
+        self.from_des = from_des
         self.to = to
         self.seat = ['Empty' for i in range(20)]
         pass
@@ -111,7 +111,7 @@ class Counter(NSU_bus):
         name = input("Enter your name: ")
         password = input("Enter your password: ")
         self.new_user = User(name, password)
-        self.user_list.append(self.new_user)
+        self.user_list.append(vars(self.new_user))
 
     
     def available_buses(self):
@@ -124,7 +124,7 @@ class Counter(NSU_bus):
                 print(f"{' '*10}{'#'*10} BUS {bus['coach']} INFO {'#'*10}")
                 print(f"Bus Number: {bus['coach']} \t Driver: {bus['driver']}")
                 print(f"Arrival : {bus['arrival']} \t Departure Time: {bus['deaparture']}")
-                print(f"From: \t{bus['form_des']} \t\t To: \t {bus['to']}")
+                print(f"From: \t{bus['from_des']} \t\t To: \t {bus['to']}")
                 print('*'*50)
     
 
@@ -159,11 +159,40 @@ while True:
                     break
             if flag:
                 while True:
-                    print(f"\n{' '*10}Welcome to BUS TICKET BOOKING SYSTeM")
+                    print(f"\n{' '*10}Hello {name} Welcome to BUS TICKET BOOKING SYSTeM")
                     print("1. Aviailable Buses")
                     print("2. Show Bus Info")
                     print("3. Reservation Ticket")
                     print("4. Exit")
+                    a = int(input("Enter Your choice: "))
+                    if a==4:
+                        break
+                    elif a==1:
+                        b.available_buses()
+                    elif a==2:
+                        b.show_ticket()
+                    elif a==3:
+                        b.reservation()
+            else:
+                print("No Username Found ")
+        else:
+            while True:
+                print(f"\n{' '*10}Hello Al Amin, Welcome to BUS TICKET BOOKING SYSTeM")
+                print("1. Add Bus")
+                print("2. Available Buses")
+                print("3. Show Bus Info")
+                print("4. Exit")
+                a = int(input("Enter Your choice: "))
+                if a==4:
+                    break
+                elif a==1:
+                    b.add_bus()
+                elif a==2:
+                    b.available_buses()
+                elif a==3:
+                    b.show_ticket()
+
+
 
 
 
