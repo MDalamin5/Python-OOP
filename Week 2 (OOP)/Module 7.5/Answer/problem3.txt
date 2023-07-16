@@ -1,0 +1,105 @@
+Differences between class methods and static methods:
+
+1. Access to Class Attributes:
+   - Class Method: Can access and modify class attributes through the `cls` parameter.
+   - Static Method: Cannot access or modify class attributes directly.
+
+   ```python
+   class MyClass:
+       class_attribute = "Hello"
+
+       @classmethod
+       def class_method(cls):
+           print(cls.class_attribute)  # Accessing class attribute
+
+       @staticmethod
+       def static_method():
+           print(MyClass.class_attribute)  # Accessing class attribute
+
+
+   MyClass.class_method()  # Output: Hello
+   MyClass.static_method()  # Output: Hello
+   ```
+
+2. Access to Instance Attributes:
+   - Class Method: Cannot access or modify instance attributes directly.
+   - Static Method: Cannot access or modify instance attributes directly.
+
+   ```python
+   class MyClass:
+       def __init__(self):
+           self.instance_attribute = "World"
+
+       @classmethod
+       def class_method(cls):
+           # Cannot access instance_attribute directly
+           print(cls.instance_attribute)  # Raises AttributeError
+
+       @staticmethod
+       def static_method():
+           # Cannot access instance_attribute directly
+           print(MyClass.instance_attribute)  # Raises AttributeError
+
+
+   obj = MyClass()
+   obj.class_method()  # Raises AttributeError
+   obj.static_method()  # Raises AttributeError
+   ```
+
+3. Accessing Methods:
+   - Class Method: Can access other class methods and static methods using the `cls` parameter.
+   - Static Method: Can only access other static methods using the class name.
+
+   ```python
+   class MyClass:
+       @classmethod
+       def class_method(cls):
+           cls.static_method()  # Accessing static method
+           cls.another_class_method()  # Accessing class method
+
+       @staticmethod
+       def static_method():
+           print("Static method")
+
+       @classmethod
+       def another_class_method(cls):
+           print("Class method")
+
+
+   MyClass.class_method()
+   # Output:
+   # Static method
+   # Class method
+   ```
+
+4. Inheritance:
+   - Class Method: Can be overridden in subclasses, and the overridden method will be called based on the object type.
+   - Static Method: Can be shadowed in subclasses, and the original static method will be called based on the class it is defined in.
+
+   ```python
+   class Parent:
+       @classmethod
+       def method(cls):
+           print("Parent class method")
+
+       @staticmethod
+       def static_method():
+           print("Parent static method")
+
+
+   class Child(Parent):
+       @classmethod
+       def method(cls):
+           print("Child class method")
+
+       @staticmethod
+       def static_method():
+           print("Child static method")
+
+
+   obj = Child()
+   obj.method()  # Output: Child class method
+   obj.static_method()  # Output: Child static method
+   ```
+
+These differences highlight the varying behavior and capabilities of class methods and static methods in Python. Understanding these distinctions is crucial when deciding which method type to use in different scenarios.

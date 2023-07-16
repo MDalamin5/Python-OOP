@@ -1,0 +1,10 @@
+Method overloading: method overloading use for when an object comper to another object 
+parameter.
+ 
+ example: 
+ def __eq__(other):
+     return self.data == other.data
+
+Method overriding: if parent class has a method and that class extexn by another class and 
+this class called child class if child class give a new implementation of that method
+then it will be method overloading.
