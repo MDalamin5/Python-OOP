@@ -1,0 +1,28 @@
+ * inharitance
+ * encapsulation
+ * polymorphism
+ * abstraction
+ ----------------
+
+ Classes:
+
+ ** User : base class (ABC)
+ 2. Custmer(User)
+ 3. Employee (User)
+ 4. Chef (Employee)
+ 5. Server (Employee)
+ 6. Manager (Employee)
+ 7. Cleaner (Employee)
+ 8. Supplier (User)
+ 9. Markerter(User)
+
+
+ ** FoodItem
+ 2. Pizza (FoodItem)
+ 3. Burger (FoodItem)
+ 4. Drinks (FoodItem)
+ 5. Juice (FoodItem)
+ 6. Salad (FoodItem)
+
+ *** Order
+  2. Restaurant
