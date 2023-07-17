@@ -1,0 +1,48 @@
+#1 
+Encapsulation: Inner functions help achieve encapsulation by allowing the definition of helper functions that are only used within a specific method or class. 
+This helps keep the implementation details hidden and provides a clean interface for the external code.
+
+Example:
+class Calculator:
+    def calculate(self, a, b):
+        def add():
+            return a + b
+
+        def subtract():
+            return a - b
+
+        sum_result = add()
+        diff_result = subtract()
+        return sum_result, diff_result
+
+calc = Calculator()
+result = calc.calculate(5, 3)
+print(result)  # Output: (8, 2)
+
+In the above example, the inner functions add() and subtract() are encapsulated within the calculate() method of the Calculator class.
+ These inner functions are only accessible within the calculate() method and cannot be accessed from outside the class. 
+ This improves encapsulation and helps maintain a clear separation of concerns.
+
+
+#2 
+Function Reusability: Inner functions can be reused within the same method or across multiple methods within the same class.
+They allow for the creation of utility functions specific to the class, enabling code reuse and reducing duplication.
+
+example:
+class MathUtils:
+    def calculate_average(self, numbers):
+        def calculate_sum():
+            return sum(numbers)
+
+        total = calculate_sum()
+        average = total / len(numbers)
+        return average
+
+math_utils = MathUtils()
+result = math_utils.calculate_average([1, 2, 3, 4, 5])
+print(result)  # Output: 3.0
+
+
+In the above example, the inner function calculate_sum() is reused within the calculate_average() method of the MathUtils class.
+This allows the logic for calculating the sum of numbers to be written once and reused multiple times within the class, promoting code 
+reusability and reducing redundancy.

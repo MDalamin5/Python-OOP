@@ -1,0 +1,55 @@
+Differences between class methods and static methods:
+
+#1. Acess to class attributes:
+
+   - Class Method: Can access and modify class attributes through the `cls` parameter.
+   - Static Method: Cannot access or modify class attributes directly.
+
+   Example: 
+    
+    class Phitron:
+    clsas_attri = 'HEllo Phitron"
+
+    @classmethod
+       def class_method(cls):
+           print(cls.class_attribute)  // Accessing class attribute
+
+       @staticmethod
+       def static_method():
+           print(MyClass.class_attribute)  // Accessing class attribute
+
+ Phitron.class_method()  # Output: Hello Phitron
+ Phitron.static_method()  # Output: Hello Phitron
+
+ #2. Access to Instance Attributes:
+   - Class Method: Cannot access or modify instance attributes directly.
+   - Static Method: Cannot access or modify instance attributes directly.
+
+
+
+#3. 3. Accessing Methods:
+   - Class Method: Can access other class methods and static methods using the `cls` parameter.
+   - Static Method: Can only access other static methods using the class name.
+
+   
+   class Phitron:
+       @classmethod
+       def class_method(cls):
+           cls.static_method()  # Accessing static method
+           cls.another_class_method()  # Accessing class method
+
+       @staticmethod
+       def static_method():
+           print("Static method")
+
+       @classmethod
+       def another_class_method(cls):
+           print("Class method")
+
+
+   Phitron.class_method()
+   # Output:
+   # Static method
+   # Class method
+
+   
