@@ -121,6 +121,10 @@ class ClassRoom:
         for subject in self.subjects:
             subject.exam(self.students)
 
+        # calculate final grade
+        for student in self.students:
+            student.calculate_final_grade()
+
     def __str__(self) -> str:
         return f'{self.name}-{len(self.students)}'
     
