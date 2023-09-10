@@ -1,9 +1,7 @@
-x=10
-print(x)
-
-class hello:
-    def __init__ (self, x,y):
-        print("hi sir!!")
-
-
-    
+can = 'beans'
+print(can)
+print(type(can))
+learn_advance_python = True
+print(type(learn_advance_python))
+id(can)
+print(id(can))
