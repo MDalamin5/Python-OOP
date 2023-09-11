@@ -7,3 +7,4 @@ foo = 2.3e4
 print(foo)
 a = 2345.2345
 print(round(a))
+print()
