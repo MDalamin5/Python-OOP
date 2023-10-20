@@ -8,3 +8,7 @@ a = range(0,5,2)
 
 for i in a:
     print(i)
+    if i==4:
+        break
+else:
+    print("Loop exicute Sucessfully")
