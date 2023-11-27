@@ -22,3 +22,4 @@ for item in person:
 # spatial looping
 for key, value in person.items():
     print(key, value)
+    print('end line')
